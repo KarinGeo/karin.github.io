@@ -1,0 +1,6 @@
+.widget--toc #TableOfContents ol,
+.widget--toc #TableOfContents ul {
+    list-style-type: none; /* 移除默认的列表符号 */
+    margin: 0;
+    padding: 0;
+}
