@@ -7,7 +7,31 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>卡林-Karin</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 13:15:49 +0800</lastBuildDate><atom:link href="https://KarinGeo.github.io/karin.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Mar 2025 16:03:26 +0800</lastBuildDate><atom:link href="https://KarinGeo.github.io/karin.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C#</title>
+        <link>https://KarinGeo.github.io/karin.github.io/tags/c%23/</link>
+        <pubDate>Fri, 07 Mar 2025 16:03:26 +0800</pubDate>
+        
+        <guid>https://KarinGeo.github.io/karin.github.io/tags/c%23/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Unity</title>
+        <link>https://KarinGeo.github.io/karin.github.io/tags/unity/</link>
+        <pubDate>Fri, 07 Mar 2025 16:03:26 +0800</pubDate>
+        
+        <guid>https://KarinGeo.github.io/karin.github.io/tags/unity/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>设计模式</title>
+        <link>https://KarinGeo.github.io/karin.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <pubDate>Fri, 07 Mar 2025 16:03:26 +0800</pubDate>
+        
+        <guid>https://KarinGeo.github.io/karin.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Command</title>
         <link>https://KarinGeo.github.io/karin.github.io/tags/command/</link>
         <pubDate>Fri, 07 Mar 2025 13:15:49 +0800</pubDate>

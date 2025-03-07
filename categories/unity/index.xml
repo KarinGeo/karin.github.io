@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>卡林-Karin</title>
-        <link>https://KarinGeo.github.io/karin.github.io/</link>
-        <description>Recent content on 卡林-Karin</description>
+        <title>Unity on 卡林-Karin</title>
+        <link>https://KarinGeo.github.io/karin.github.io/categories/unity/</link>
+        <description>Recent content in Unity on 卡林-Karin</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>卡林-Karin</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 16:03:26 +0800</lastBuildDate><atom:link href="https://KarinGeo.github.io/karin.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Mar 2025 16:03:26 +0800</lastBuildDate><atom:link href="https://KarinGeo.github.io/karin.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】单例模式Singleton</title>
         <link>https://KarinGeo.github.io/karin.github.io/p/unity%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8Fsingleton/</link>
         <pubDate>Fri, 07 Mar 2025 16:03:26 +0800</pubDate>
@@ -330,113 +330,6 @@
 &lt;p&gt;4、“懒汉式”如果单例A的Awake()里添加了某些组件，单例B访问单例A时，才AddComponent创建A，根本访问不到A的Awake()里添加的组件。&lt;/p&gt;
 &lt;p&gt;总结：尽量别用。用也要遵循一些规律，如饿汉式别用代码添加，懒汉式别直接挂载，保持一致性。跟生命周期相关的地方要注意。&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>【Common】各软件环境的常用命令列表</title>
-        <link>https://KarinGeo.github.io/karin.github.io/p/common%E5%90%84%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8/</link>
-        <pubDate>Fri, 07 Mar 2025 13:15:49 +0800</pubDate>
-        
-        <guid>https://KarinGeo.github.io/karin.github.io/p/common%E5%90%84%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8/</guid>
-        <description>&lt;h2 id=&#34;一hugo命令&#34;&gt;一、Hugo命令
-&lt;/h2&gt;&lt;p&gt;1、创建新的文件夹&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site xxx
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;2、创建新的内容（文章）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new content post/xxx/index.md
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;3、运行服务&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --buildDrafts 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;4、生成github用的文件&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://KarinGeo.github.io/karin.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://KarinGeo.github.io/karin.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://KarinGeo.github.io/karin.github.io/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://KarinGeo.github.io/karin.github.io/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>连接</title>
-        <link>https://KarinGeo.github.io/karin.github.io/%E8%BF%9E%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://KarinGeo.github.io/karin.github.io/%E8%BF%9E%E6%8E%A5/</guid>
-        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
-&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://KarinGeo.github.io/karin.github.io/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://KarinGeo.github.io/karin.github.io/search/</guid>
-        <description></description>
         </item>
         
     </channel>
