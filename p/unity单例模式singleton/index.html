@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一、单例模式 保证一个类只有一个实例，并且提供全局访问点。\n二、单例模式实现原理 1、饿汉式单例 先来看一个Unity中非Mono类的单例模式。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 class Sigleton { //静态只读字段 private static readonly Singleton _instance = new Singleton(); //全局访问点 public static Singleton Instance =&gt; _instance; //私有化构造函数 private Singleton() { } } 首先，通过对构造函数私有化。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一、单例模式 保证一个类只有一个实例，并且提供全局访问点。\n二、单例模式实现原理 1、饿汉式单例 先来看一个Unity中非Mono类的单例模式。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Sigleton { //静态只读字段 private static readonly Singleton _instance = new Singleton(); //全局访问点 public static Singleton Instance =&gt; _instance; //私有化构造函数 private Singleton() { } } 首先，通过对构造函数私有化。\n">
 <title>【Unity】单例模式Singleton</title>
 
 <link rel='canonical' href='https://KarinGeo.github.io/karin.github.io/p/unity%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8Fsingleton/'>
 
 <link rel="stylesheet" href="/karin.github.io/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【Unity】单例模式Singleton">
-<meta property='og:description' content="一、单例模式 保证一个类只有一个实例，并且提供全局访问点。\n二、单例模式实现原理 1、饿汉式单例 先来看一个Unity中非Mono类的单例模式。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 class Sigleton { //静态只读字段 private static readonly Singleton _instance = new Singleton(); //全局访问点 public static Singleton Instance =&gt; _instance; //私有化构造函数 private Singleton() { } } 首先，通过对构造函数私有化。\n">
+<meta property='og:description' content="一、单例模式 保证一个类只有一个实例，并且提供全局访问点。\n二、单例模式实现原理 1、饿汉式单例 先来看一个Unity中非Mono类的单例模式。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Sigleton { //静态只读字段 private static readonly Singleton _instance = new Singleton(); //全局访问点 public static Singleton Instance =&gt; _instance; //私有化构造函数 private Singleton() { } } 首先，通过对构造函数私有化。\n">
 <meta property='og:url' content='https://KarinGeo.github.io/karin.github.io/p/unity%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8Fsingleton/'>
 <meta property='og:site_name' content='卡林-Karin'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Unity' /><meta property='article:tag' content='C#' /><meta property='article:tag' content='设计模式' /><meta property='article:published_time' content='2025-03-07T16:03:26&#43;08:00'/><meta property='article:modified_time' content='2025-03-07T16:03:26&#43;08:00'/>
 <meta name="twitter:title" content="【Unity】单例模式Singleton">
-<meta name="twitter:description" content="一、单例模式 保证一个类只有一个实例，并且提供全局访问点。\n二、单例模式实现原理 1、饿汉式单例 先来看一个Unity中非Mono类的单例模式。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 class Sigleton { //静态只读字段 private static readonly Singleton _instance = new Singleton(); //全局访问点 public static Singleton Instance =&gt; _instance; //私有化构造函数 private Singleton() { } } 首先，通过对构造函数私有化。\n">
+<meta name="twitter:description" content="一、单例模式 保证一个类只有一个实例，并且提供全局访问点。\n二、单例模式实现原理 1、饿汉式单例 先来看一个Unity中非Mono类的单例模式。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 public class Sigleton { //静态只读字段 private static readonly Singleton _instance = new Singleton(); //全局访问点 public static Singleton Instance =&gt; _instance; //私有化构造函数 private Singleton() { } } 首先，通过对构造函数私有化。\n">
     </head>
     <body class="
     article-page
@@ -370,7 +370,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Sigleton</span>
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Sigleton</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//静态只读字段</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="k">readonly</span> <span class="n">Singleton</span> <span class="n">_instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="p">();</span>
@@ -661,7 +661,7 @@
 <p>1、“饿汉式”需要手动管理，在场景中初始挂载多个时，是否使用Destroy也是问题，为维持单例模式需要删除该物体，但是这样做又可能会删错东西。</p>
 <p>2、“饿汉式”当场景中已经挂载XXXMnager（一个）时，再在其他类中的Awake()里用代码添加XXXMnager（一个）时，XXXMnager的Awake()会执行两次。但场景中只会剩下一个带XXXMnager的物体。</p>
 <p>3、“懒汉式”如果场景种已经挂载多个，“懒汉式”无法删除到只剩一个，因为get{}里无法使用gameObject。</p>
-<p>4、“懒汉式”如果单例A的Awake()里添加了某些组件，单例B访问单例A时，才AddComponent创建A，根本访问不到A的Awake()里添加的组件。</p>
+<p>4、“懒汉式”如果单例A的Awake()里添加了某些组件，单例B访问单例A时，才AddComponent创建A，在B的Awake()和OnEnable()里根本访问不到A的Awake()里添加的组件。</p>
 <p>总结：尽量别用。用也要遵循一些规律，如饿汉式别用代码添加，懒汉式别直接挂载，保持一致性。跟生命周期相关的地方要注意。</p>
 
 </section>

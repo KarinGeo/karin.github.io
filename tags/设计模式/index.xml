@@ -36,7 +36,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Sigleton&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Sigleton&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//静态只读字段&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Singleton&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_instance&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Singleton&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
@@ -327,7 +327,7 @@
 &lt;p&gt;1、“饿汉式”需要手动管理，在场景中初始挂载多个时，是否使用Destroy也是问题，为维持单例模式需要删除该物体，但是这样做又可能会删错东西。&lt;/p&gt;
 &lt;p&gt;2、“饿汉式”当场景中已经挂载XXXMnager（一个）时，再在其他类中的Awake()里用代码添加XXXMnager（一个）时，XXXMnager的Awake()会执行两次。但场景中只会剩下一个带XXXMnager的物体。&lt;/p&gt;
 &lt;p&gt;3、“懒汉式”如果场景种已经挂载多个，“懒汉式”无法删除到只剩一个，因为get{}里无法使用gameObject。&lt;/p&gt;
-&lt;p&gt;4、“懒汉式”如果单例A的Awake()里添加了某些组件，单例B访问单例A时，才AddComponent创建A，根本访问不到A的Awake()里添加的组件。&lt;/p&gt;
+&lt;p&gt;4、“懒汉式”如果单例A的Awake()里添加了某些组件，单例B访问单例A时，才AddComponent创建A，在B的Awake()和OnEnable()里根本访问不到A的Awake()里添加的组件。&lt;/p&gt;
 &lt;p&gt;总结：尽量别用。用也要遵循一些规律，如饿汉式别用代码添加，懒汉式别直接挂载，保持一致性。跟生命周期相关的地方要注意。&lt;/p&gt;
 </description>
         </item>
