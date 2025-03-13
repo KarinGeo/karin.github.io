@@ -594,7 +594,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">_instance</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Destroy</span><span class="p">(</span><span class="n">gameObject</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Destroy</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">else</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
@@ -662,7 +662,8 @@
 <p>2、“饿汉式”当场景中已经挂载XXXMnager（一个）时，再在其他类中的Awake()里用代码添加XXXMnager（一个）时，XXXMnager的Awake()会执行两次。但场景中只会剩下一个带XXXMnager的物体。</p>
 <p>3、“懒汉式”如果场景种已经挂载多个，“懒汉式”无法删除到只剩一个，因为get{}里无法使用gameObject。</p>
 <p>4、“懒汉式”如果单例A的Awake()里添加了某些组件，单例B访问单例A时，才AddComponent创建A，在B的Awake()和OnEnable()里根本访问不到A的Awake()里添加的组件。</p>
-<p>总结：尽量别用。用也要遵循一些规律，如饿汉式别用代码添加，懒汉式别直接挂载，保持一致性。跟生命周期相关的地方要注意。</p>
+<p>总结：继承MonoBehaviour的单例模式，难用的实际原因是，没有办法完全避免外部创建，就算内部实现了重复销毁，也会与生命周期的结合导致各式各样的问题。</p>
+<p>目前我使用的方法是，使用饿汉式单例，在游戏代码入口处查找场景内已有单例，添加到一个列表中，再添加所需的单例，也添加到列表中。在下一帧中删除列表中为null的单例。然后等待单例中的事件订阅完成（可能加入资源加载）后，再执行游戏开始逻辑。</p>
 
 </section>
 
@@ -701,6 +702,28 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/karin.github.io/p/unity%E6%AD%A3%E4%BA%A4%E7%9B%B8%E6%9C%BA%E4%B8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%BA%B9%E7%90%86/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【Unity】正交相机下的深度纹理</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

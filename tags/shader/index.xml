@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Shader on 卡林-Karin</title>
+        <link>https://KarinGeo.github.io/karin.github.io/tags/shader/</link>
+        <description>Recent content in Shader on 卡林-Karin</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>卡林-Karin</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 23:00:28 +0800</lastBuildDate><atom:link href="https://KarinGeo.github.io/karin.github.io/tags/shader/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Unity】正交相机下的深度纹理</title>
+        <link>https://KarinGeo.github.io/karin.github.io/p/unity%E6%AD%A3%E4%BA%A4%E7%9B%B8%E6%9C%BA%E4%B8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%BA%B9%E7%90%86/</link>
+        <pubDate>Thu, 13 Mar 2025 23:00:28 +0800</pubDate>
+        
+        <guid>https://KarinGeo.github.io/karin.github.io/p/unity%E6%AD%A3%E4%BA%A4%E7%9B%B8%E6%9C%BA%E4%B8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%BA%B9%E7%90%86/</guid>
+        <description>&lt;h2 id=&#34;一深度纹理&#34;&gt;一、深度纹理
+&lt;/h2&gt;&lt;p&gt;深度纹理是一个灰度图像，格式为sampler2D，在shader中使用_CameraDepthTexture来获取，它根据物体与相机之间的距离为物体着色，生成一张灰度图，靠近相机的物体更亮，远离相机的物体更暗。&lt;/p&gt;
+&lt;p&gt;![img](D:\Desktop\Personal Homepage\dev\content\post\orthogonalshader\assets\toon-water-depth.png)&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://roystan.net/articles/toon-water/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://roystan.net/articles/toon-water/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
