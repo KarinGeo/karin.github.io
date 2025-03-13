@@ -269,6 +269,7 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#一深度纹理">一、深度纹理</a></li>
+    <li><a href="#一深度纹理采样">一、深度纹理采样</a></li>
     <li><a href="#参考资料">参考资料</a></li>
   </ul>
 </nav>
@@ -337,17 +338,74 @@
     
     <h2 id="一深度纹理">一、深度纹理
 </h2><p>深度纹理是一个灰度图像，格式为sampler2D，在shader中使用_CameraDepthTexture来获取，它根据物体与相机之间的距离为物体着色，生成一张灰度图，靠近相机的物体更亮，远离相机的物体更暗。</p>
-<p><img src="/karin.github.io/assets%5ctoon-water-depth.png"
-	
-	
-	
+<p><img src="/karin.github.io/p/unity%E6%AD%A3%E4%BA%A4%E7%9B%B8%E6%9C%BA%E4%B8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%BA%B9%E7%90%86/toon-water-depth.png"
+	width="1280"
+	height="720"
+	srcset="/karin.github.io/p/unity%E6%AD%A3%E4%BA%A4%E7%9B%B8%E6%9C%BA%E4%B8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%BA%B9%E7%90%86/toon-water-depth_hu_93386791d997006f.png 480w, /karin.github.io/p/unity%E6%AD%A3%E4%BA%A4%E7%9B%B8%E6%9C%BA%E4%B8%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%BA%B9%E7%90%86/toon-water-depth_hu_854ec4034e029835.png 1024w"
 	loading="lazy"
 	
 		alt="img"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
 ></p>
-<h2 id="参考资料">参考资料
+<p>想要获取深度纹理，需要在相机上挂载脚本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">CameraDepthTextureMode</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DepthTextureMode</span> <span class="n">depthTextureMode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">OnValidate</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SetCameraDepthTextureMode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">Awake</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SetCameraDepthTextureMode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">SetCameraDepthTextureMode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Camera</span><span class="p">&gt;().</span><span class="n">depthTextureMode</span> <span class="p">=</span> <span class="n">depthTextureMode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>depthTextureMode选择Depth</p>
+<h2 id="一深度纹理采样">一、深度纹理采样
+</h2><h2 id="参考资料">参考资料
 </h2><p><a class="link" href="https://roystan.net/articles/toon-water/"  target="_blank" rel="noopener"
     >https://roystan.net/articles/toon-water/</a></p>
 
